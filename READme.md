@@ -11,3 +11,5 @@ CSS
 Javascript
 Python (Django)
 ![Proyecto_captura](https://myoctocat.com/assets/images/base-octocat.svg)
+
+Muchas Gracias!
