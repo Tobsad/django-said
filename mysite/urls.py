@@ -18,13 +18,19 @@ from django.contrib import admin
 from django.urls import path,include
 
 #asi se importa solo una funcion
-from myapp.views import vista_compuesta
+#from myapp.views import vista_compuesta
+from consultoria import views
+
 # importando todo el archivo views.py
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #aqui estaran todas las vistas de urls del aplicativo, en este caso myapp
-    path('', include('myapp.urls')),
-    
+    # aqui estan en la main page los ejercicios solo descomenta y comenta el otro: path('', include('myapp.urls')),
+    path('', views.index,name='inicio'),
+    path('asesoria/', views.asesoria, name='asesoria'),
+    path('contacto/', views.contacto, name='contacto'),
+    path('marketing/', views.marketing, name='marketing'),
+    path('nosotros/', views.nosotros, name='nosotros')
 ]

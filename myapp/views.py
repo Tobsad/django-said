@@ -59,26 +59,26 @@ def ejercicio7(request):
             break
         i += 1
     if es_primo:
-        s="El número ", n,"  es primo"
-        respuesta7=s
+        si="El número ", n,"  es primo"
+        respuesta7=si
     else:
-        n="El número ",n ," no es primo"
-        respuesta7=n
+        no="El número ",n ," no es primo"
+        respuesta7=no
     return HttpResponse(respuesta7)
 
 def ejercicio8(request):
-    cadena = "Hola mundo"
+    cadena = "murcielago"
     while True:
         inverso= ''.join(reversed(cadena))
-        print(inverso) # salida: odnum aloH
+        
         return HttpResponse(f"La palabra es {cadena} y su inverso es {inverso}")
 
 def ejercicio9(request):
     n = random.randint(0, 10)
     a, b = 0, 1
     ultimo=[]
-    while a <= n:
-        ultimo.append(a)
+    while a <= 5:          
+        ultimo.append(a)   
         a, b = b, a+b
     
     return HttpResponse(ultimo)
@@ -88,10 +88,10 @@ def ejercicio10(request):
     inicial=numero
     suma = 0
     while numero > 0:
-        digito = numero % 10
-        suma += digito
+        unidades = numero % 10
+        suma += unidades
         numero //= 10
-    return HttpResponse(f"El usuario dio el numero {inicial} y la suma de los dígitos es: {suma} ")
+    return HttpResponse(f"La maquina dio el numero {inicial} y la suma de los dígitos es: {suma} ")
 
 def ejercicio11(request):
     cadena = "anitalavalatina"
@@ -107,7 +107,7 @@ def ejercicio11(request):
         palindromo="La cadena es un palíndromo"
     else:
         palindromo="La cadena no es un palíndromo"
-    return HttpResponse(palindromo)
+    return HttpResponse(f"La palabra que diste {cadena},{palindromo}")
 
 def ejercicio12(request):
     cadena = "esternocleidomastoideo"
@@ -145,17 +145,17 @@ def ejercicio14(request):
 
 def ejercicio15(request):
     #superusuario:
-    username = "Tobsad"
+    superusuario = "Tobsad"
     #usuario ingresado
     usuario_ingresado="Tobsad"    
     adivinado = False
     while not adivinado:
-        if usuario_ingresado != username:
-            ingresado=f"Acceso denegado, El usuario: {usuario_ingresado} no tiene permisos de superusuario."
+        if usuario_ingresado != superusuario:
+            respuesta=f"Acceso denegado, El usuario: {usuario_ingresado} no tiene permisos de superusuario."
         else:
-            ingresado=f"Acceso concedido, Bienvenido {username}"
+            respuesta=f"Acceso concedido, Bienvenido {superusuario}"
         adivinado = True
-    return HttpResponse(f"El  nombre del usuario es {username} y usted ingreso {usuario_ingresado}. Asi que:{ingresado}")
+    return HttpResponse(f"El  nombre del usuario es {superusuario} y usted ingreso {usuario_ingresado}. Asi que:{respuesta}")
 
 #todas las vistas
 def vista_compuesta(request):
