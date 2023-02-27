@@ -6,10 +6,11 @@ Said Eslander Torpoco Calzado
 ## **Enlace de Proyecto:** 
 Este es el link del Proyecto: [Link del Proyecto Desplegado](https://django-said-production.up.railway.app/).
 ## **Herramientas usadas:** 
-HTML
-CSS
-Javascript
-Python (Django)
-![Proyecto_captura](https://myoctocat.com/assets/images/base-octocat.svg)
+-HTML
+-CSS
+-Javascript
+-Python (Django)
+
+![Proyecto_captura](/django_production.png)
 
 Muchas Gracias!
