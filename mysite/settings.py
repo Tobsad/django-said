@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # SECURITY WARNING: don't run with debug turned on in production!
 # IMPORTANTEEEEEEEEEEEEEEEEEEEEEE
 # esto hace aparecer los errores como el 404 y otras cosas
-DEBUG = True
+DEBUG = False
 
 
 
